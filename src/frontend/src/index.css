@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Dark industrial luxury palette */
+    --background: 0.13 0.008 240;
+    --foreground: 0.92 0.005 240;
+    --card: 0.16 0.01 240;
+    --card-foreground: 0.92 0.005 240;
+    --popover: 0.18 0.012 240;
+    --popover-foreground: 0.92 0.005 240;
+    --primary: 0.78 0.065 78;
+    --primary-foreground: 0.13 0.008 240;
+    --secondary: 0.22 0.012 240;
+    --secondary-foreground: 0.85 0.005 240;
+    --muted: 0.2 0.01 240;
+    --muted-foreground: 0.58 0.01 240;
+    --accent: 0.75 0.07 80;
+    --accent-foreground: 0.13 0.008 240;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.26 0.012 240;
+    --input: 0.22 0.012 240;
+    --ring: 0.78 0.065 78;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.16 0.01 240;
+    --sidebar-foreground: 0.92 0.005 240;
+    --sidebar-primary: 0.78 0.065 78;
+    --sidebar-primary-foreground: 0.13 0.008 240;
+    --sidebar-accent: 0.22 0.012 240;
+    --sidebar-accent-foreground: 0.85 0.005 240;
+    --sidebar-border: 0.26 0.012 240;
+    --sidebar-ring: 0.78 0.065 78;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    background-color: #0f1418;
+    color: #e6e8ea;
+  }
+}
+
+/* Brass gradient utility */
+.brass-gradient {
+  background: linear-gradient(135deg, #d8c39a, #b79c6b);
+}
+
+.brass-text {
+  background: linear-gradient(135deg, #d8c39a, #b79c6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brass-border-glow:hover {
+  box-shadow: 0 0 0 2px #b79c6b, 0 20px 40px rgba(183, 156, 107, 0.25);
+  transform: translateY(-8px);
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+.reveal-delay-5 {
+  transition-delay: 0.5s;
+}
+.reveal-delay-6 {
+  transition-delay: 0.6s;
+}
